@@ -5,7 +5,7 @@ import { NavigationMixin } from 'lightning/navigation';
 /** BearController.getAllBears() Apex method */
 import searchBears from '@salesforce/apex/BearController.searchBears';
 
-export default class BearList extends LightningElement {
+export default class BearListNav extends NavigationMixin(LightningElement) {
     searchTerm = '';
 
     @wire(searchBears, {searchTerm: '$searchTerm'})
