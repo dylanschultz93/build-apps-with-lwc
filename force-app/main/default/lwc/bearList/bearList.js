@@ -18,7 +18,7 @@ export default class BearList extends LightningElement {
         window.clearTimeout(this.delayTimeout);
         const searchTerm = event.target.value;
         // eslint-disable-next-line @lwc/lwc/no-async-operation
-        this.delayTimout = setTimeout(() => {
+        this.delayTimeout = setTimeout(() => {
             this.searchTerm = searchTerm;
         }, 300);
     }
